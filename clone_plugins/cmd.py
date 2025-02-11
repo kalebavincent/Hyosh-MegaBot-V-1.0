@@ -69,7 +69,7 @@ async def start(client: Client, message: Message):
 
 @Client.on_message((filters.forwarded & filters.private) | (filters.incoming & filters.private))
 async def createte_bot(client: Client, message: Message):
-    global mode, posts, last_editmessageid, messageid, taskid , last_editermessage, edimode, editpostid
+    global mode, posts, last_editmessageid, messageid, taskid , last_editermessage, edimode, editpostid, add_channelmode
     userid = message.from_user.id
     userinfo = await get_user(userid)
     settings = userinfo.get("settings", {})

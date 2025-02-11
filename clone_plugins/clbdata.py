@@ -123,6 +123,7 @@ async def clbdata(client: Client, query: CallbackQuery):
 
 
     elif data == "add_new_channel":
+        cmd.add_channelmode = True
         bot_username = me.username
         add_bot_link = f"https://t.me/{bot_username}?startgroup=true&admin=can_post_messages,can_edit_messages,can_delete_messages,can_invite_users,can_manage_chat,can_change_info,can_pin_messages"
 
