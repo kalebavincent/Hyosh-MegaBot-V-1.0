@@ -56,7 +56,7 @@ Le bot vous permet de suivre les performances de vos publications avec des stati
 ## 📜 Licence
 
 Ce projet est sous une **licence personnalisée** qui permet l'utilisation du code mais **interdit sa modification**. Vous êtes autorisé à :
-- Utiliser le code à des fins personnelles ou commerciales.
+- Utiliser le code à des fins personnelles non commerciales.
 - Distribuer le code sous sa forme originale.
 
 **Vous n'êtes PAS autorisé à :**
