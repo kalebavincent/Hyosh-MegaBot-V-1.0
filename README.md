@@ -53,6 +53,14 @@ Le bot vous permet de suivre les performances de vos publications avec des stati
 
 ---
 
+## 🚀 Déploiement sur Koyeb
+
+Vous pouvez déployer ce bot sur **Koyeb** en un seul clic :
+
+[![Déployer sur Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/kalebavincent/Hyosh-MegaBot-V-1.0.git)
+
+---
+
 ## 📜 Licence
 
 Ce projet est sous une **licence personnalisée** qui permet l'utilisation du code mais **interdit sa modification**. Vous êtes autorisé à :
