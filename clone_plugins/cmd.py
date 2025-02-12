@@ -31,7 +31,6 @@ editpostid ={}
 @Client.on_message(filters.command(["start"]) & filters.private)
 async def start(client: Client, message: Message):
     global mode, add_channelmode, taskid
-    await message.delete()
     userid = message.from_user.id
     user_info = await get_user(userid)
     add_channelmode = False
