@@ -262,8 +262,8 @@ def default_settings(id):
         "link_preview": False,
         "default_reaction": False,
         "default_reaction_emoji": "👍",
-        "delay_time": int,
-        "schedule_time": int,
+        "delay_time": 0,
+        "schedule_time": 0,
     }
 
 
