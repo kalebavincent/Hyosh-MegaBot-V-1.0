@@ -250,6 +250,11 @@ async def clbdata(client: Client, query: CallbackQuery):
 
     
     elif data.startswith("add_buttons_"):
+        parts = data.split("_")
+
+        if len(parts) < 3 or not parts[2].isdigit():
+            await query.message.reply_text(lang["clone"]["unknown_message"])
+            return
         message_id = int(data.split("_")[2])
         settings = userinfo.get("settings", {})
         format_format = settings.get("format_format", "normal")
@@ -283,6 +288,11 @@ async def clbdata(client: Client, query: CallbackQuery):
 
             
     elif data.startswith("add_likes_"):
+        parts = data.split("_")
+
+        if len(parts) < 3 or not parts[2].isdigit():
+            await query.message.reply_text(lang["clone"]["unknown_message"])
+            return
         message_id = int(data.split("_")[2])
         settings = userinfo.get("settings", {})
         format_format = settings.get("format_format", "normal")
@@ -315,6 +325,11 @@ async def clbdata(client: Client, query: CallbackQuery):
 
             
     elif data.startswith("add_text_"):
+        parts = data.split("_")
+
+        if len(parts) < 3 or not parts[2].isdigit():
+            await query.message.reply_text(lang["clone"]["unknown_message"])
+            return
         message_id = int(data.split("_")[2])
         settings = userinfo.get("settings", {})
         format_format = settings.get("format_format", "normal")
@@ -343,6 +358,11 @@ async def clbdata(client: Client, query: CallbackQuery):
             print(f"Erreur lors de l'ajout du texte : {e}")
             
     elif data.startswith("add_media_"):
+        parts = data.split("_")
+
+        if len(parts) < 3 or not parts[2].isdigit():
+            await query.message.reply_text(lang["clone"]["unknown_message"])
+            return
         message_id = int(data.split("_")[2])
         settings = userinfo.get("settings", {})
         format_format = settings.get("format_format", "normal")
@@ -396,6 +416,11 @@ async def clbdata(client: Client, query: CallbackQuery):
             print(f"Erreur lors de l'ajout du média : {e}")
             
     elif data.startswith("edit_text_"):
+        parts = data.split("_")
+
+        if len(parts) < 3 or not parts[2].isdigit():
+            await query.message.reply_text(lang["clone"]["unknown_message"])
+            return
         message_id = int(data.split("_")[2])
         print(message_id)
         settings = userinfo.get("settings", {})
@@ -421,6 +446,11 @@ async def clbdata(client: Client, query: CallbackQuery):
             print(f"Erreur lors de l'ajout du texte : {e}")
     
     elif data.startswith("edit_media_"):
+        parts = data.split("_")
+
+        if len(parts) < 3 or not parts[2].isdigit():
+            await query.message.reply_text(lang["clone"]["unknown_message"])
+            return
         message_id = int(data.split("_")[2])
         settings = userinfo.get("settings", {})
         format_format = settings.get("format_format", "normal")
