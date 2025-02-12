@@ -26,7 +26,6 @@ ACTIVE_BOTS = {}
 
 @Bot.on_message(filters.command(["start"]) & filters.private)
 async def start(client: Client, message: Message):
-    await message.delete()
     user_id = message.from_user.id
     user_info = await get_user(user_id)
 
