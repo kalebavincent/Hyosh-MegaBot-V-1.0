@@ -116,6 +116,7 @@ async def clbdata(client: Client, query: CallbackQuery):
         cmd.add_channelmode = True
         cmd.mode = False
         cmd.add_channelmode = False
+        cmd.add_channelmode = False
         user_selected_channels.pop(user_id, None)
         if cmd.taskid :
             await delete_task(cmd.taskid)
