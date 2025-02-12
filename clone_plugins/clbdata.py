@@ -470,33 +470,57 @@ async def clbdata(client: Client, query: CallbackQuery):
             print(f"Erreur lors de l'ajout du média : {e}")
             
     elif data.startswith("edit_buttons_"):
-        message_id = int(data.split("_")[2])
+        parts = data.split("_")
+
+        if len(parts) < 3 or not parts[2].isdigit():
+            await query.message.reply_text(lang["clone"]["unknown_message"])
+            return
+
+        message_id = int(parts[2])
+
         settings = userinfo.get("settings", {})
         format_format = settings.get("format_format", "normal")
         parse_mode = await get_user_parsemode(enums, format_format)
+
         await query.answer(lang["question"]["input_btn_str"], show_alert=True)
+
         try:
             response = await client.ask(
                 query.from_user.id,
                 lang["question"]["input_btn_str"],
                 timeout=1500
             )
+
             if response and response.text:
                 add_btnmode = response.text.strip()
+                
                 if is_valid_button_format(add_btnmode): 
-                    posts = await get_post_by_id(int(message_id))
-                    posts = Post(id=message_id, author=posts.author, text=posts.text, media=posts.media, likes=posts.likes, buttons=posts.buttons, unique_id=posts.unique_id, timestamp=posts.timestamp)
+                    posts = await get_post_by_id(message_id)
+
+                    if not posts:  # Vérifier si le post existe
+                        await query.message.reply_text("⚠️ Impossible de trouver le message.")
+                        return
+
+                    posts = Post(
+                        id=message_id, author=posts.author, text=posts.text,
+                        media=posts.media, likes=posts.likes, buttons=posts.buttons,
+                        unique_id=posts.unique_id, timestamp=posts.timestamp
+                    )
+
                     posts.add_buttons(add_btnmode)
                     await update_post(message_id, posts.model_dump())
+
                     await send_message_based_on_type(client, query.from_user.id, posts, lang, query, parse_mode)
                 else:
                     await query.message.reply_text(lang["alert"]["invalid_btn_format"]) 
             else:
                 await query.message.reply_text(lang["alert"]["no_added_btns"])
+
         except asyncio.TimeoutError:
             await query.message.reply_text(lang["alert"]["timeout"])
         except Exception as e:
-            print(f"Erreur lors de l'ajout des boutons : {e}")
+            print(f"❌ Erreur lors de l'ajout des boutons : {e}")
+
             
     elif data.startswith("rmbtn_"):
         message_id = int(data.split("_")[1])

@@ -163,6 +163,7 @@
         "save": "📝 Bonyeza kitufe hapa chini ili kuhifadhi kazi.",
         "confirm_sendpost": "📝 Tayari **{}**.\n\nJe, una uhakika unataka kutuma machapisho yote?\n\nKitendo hiki hakiwezi kufutwa.",
         "edit_post_msg": "📝 Sawa, {}! Nitumie chapisho unalotaka kuhariri hapa.",
-        "edit_time_msg": "**Kiolesura Hiki Kinakusaidia Kurekebisha Muda**\nJumla ya sekunde: {}\n\n**Mipangilio Yako ya Sasa**\n\nMuda kabla ya kufuta: {}\nMuda kabla ya kuchapisha: {}\n\n**Kujua**\nMuda unaourekebisha hapa hubadilishwa kiotomatiki kuwa sekunde kwa sababu sio programu bali ni muda wa kusubiri kabla ya kuchapisha au kufuta machapisho yako.\nTumia kitufe [reset] kuzima vigezo hivi na kisha hifadhi muda wa kufuta na kutuma ili vigezo hivi vizingatiwe kwenye machapisho yajayo."
+        "edit_time_msg": "**Kiolesura Hiki Kinakusaidia Kurekebisha Muda**\nJumla ya sekunde: {}\n\n**Mipangilio Yako ya Sasa**\n\nMuda kabla ya kufuta: {}\nMuda kabla ya kuchapisha: {}\n\n**Kujua**\nMuda unaourekebisha hapa hubadilishwa kiotomatiki kuwa sekunde kwa sababu sio programu bali ni muda wa kusubiri kabla ya kuchapisha au kufuta machapisho yako.\nTumia kitufe [reset] kuzima vigezo hivi na kisha hifadhi muda wa kufuta na kutuma ili vigezo hivi vizingatiwe kwenye machapisho yajayo.",
+        "unknown_message": "⚠️ Ujumbe huu haujachapishwa na mojawapo ya bot zetu."
     }
 }

@@ -161,6 +161,7 @@
         "save": "📝 Click on the button below to save the task.",
         "confirm_sendpost" : "📝 That's **{}**.\n\nAre you sure you want to send all the posts?\n\nThis action is irreversible.",
         "edit_post_msg": "📝 Ok super {} ! Transfer me the post you want to edit here.",
-        "edit_time_msg": "**This Interface Helps Times\nTotal in seconds : {}\n\n**Your Current Settings**\n\nDelay before deletion : {}\nDelay before posting :{}\n\n**A Know**\nThe time you set is automatically converted into sec then it's not a program but a waiting time before the post or deletion of your posts Use the [reset] button to enable these parameters and in the end to register the time of deletion and posting to make these parameters take effect in the next posts."
+        "edit_time_msg": "**This Interface Helps Times\nTotal in seconds : {}\n\n**Your Current Settings**\n\nDelay before deletion : {}\nDelay before posting :{}\n\n**A Know**\nThe time you set is automatically converted into sec then it's not a program but a waiting time before the post or deletion of your posts Use the [reset] button to enable these parameters and in the end to register the time of deletion and posting to make these parameters take effect in the next posts.",
+        "unknown_message": "⚠️ This message was not published with one of our bots."
     }
 }

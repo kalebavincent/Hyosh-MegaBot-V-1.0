@@ -163,6 +163,7 @@
         "save": "📝 Cliquez sur le bouton ci-dessous pour enregistrer la tâche.",
         "confirm_sendpost" : "📝 Ça y est **{}**.\n\nÊtes-vous sûr de vouloir envoyer tout les publications ?\n\nCette action est irréversible.",
         "edit_post_msg": "📝 Ok super {} ! Transferer moi la publication que vous souhaitez Modifier ici.",
-        "edit_time_msg": "**Cette Interface Vous Aide a regler Temps**\nTotal en secondes : {}\n\n**Vos Reglages Actuels**\n\nDellais Avant suppression : {}\nDellais Avant Publication :{}\n\n**A savoir**\nLes temps que vous regles ici est automatiquement converis en sec puis qu'il n'est s'agit pas d'un programme mais plutot un temps d'attente avant la publication ou suppression des vos posts \nUtiliser le bouton [reset] pour desactiver  ces parametres et en suite enrregistrer le temps de dellais des suppressions et envoies pour que ces parametres prises en compte dans les prochaines publications."
+        "edit_time_msg": "**Cette Interface Vous Aide a regler Temps**\nTotal en secondes : {}\n\n**Vos Reglages Actuels**\n\nDellais Avant suppression : {}\nDellais Avant Publication :{}\n\n**A savoir**\nLes temps que vous regles ici est automatiquement converis en sec puis qu'il n'est s'agit pas d'un programme mais plutot un temps d'attente avant la publication ou suppression des vos posts \nUtiliser le bouton [reset] pour desactiver  ces parametres et en suite enrregistrer le temps de dellais des suppressions et envoies pour que ces parametres prises en compte dans les prochaines publications.",
+        "unknown_message":"⚠️ Ce message n'a pas été publié avec l'un de nos bots."
     }
 }
