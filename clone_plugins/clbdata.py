@@ -167,10 +167,10 @@ async def clbdata(client: Client, query: CallbackQuery):
                 lang["alert"]["no_channels"],
                 reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton(lang["btn"]["btn_back"], callback_data="clone_main")],
-                    InlineKeyboardButton(lang["btn"]["btn_adCnl"], callback_data="add_new_channel"),
+                    [InlineKeyboardButton(lang["btn"]["btn_adCnl"], callback_data="add_new_channel")],
                 ])
             )
-            return
+
 
         all_channels = channels + unassigned_channels
         total_pages = (len(all_channels) + PAGE_SIZE - 1) // PAGE_SIZE
@@ -206,9 +206,10 @@ async def clbdata(client: Client, query: CallbackQuery):
             keyboard.append(nav_buttons)
 
         keyboard.append([
-            InlineKeyboardButton(lang["btn"]["btn_back"], callback_data="clone_main"),
-            InlineKeyboardButton(lang["btn"]["btn_adCnl"], callback_data="add_new_channel"),
-        ])
+                    InlineKeyboardButton(lang["btn"]["btn_back"], callback_data="clone_main"),
+                    InlineKeyboardButton(lang["btn"]["btn_adCnl"], callback_data="add_new_channel"),
+                ])
+
 
         await query.message.edit_text(lang["alert"]["select_channel"], reply_markup=InlineKeyboardMarkup(keyboard))
 
